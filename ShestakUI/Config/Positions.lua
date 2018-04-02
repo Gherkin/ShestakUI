@@ -39,7 +39,7 @@ C["position"] = {
 	["alt_power_bar"] = {"TOP", UIParent, "TOP", 0, -21},							-- Alt power bar
 	["talking_head"] = {"TOP", UIParent, "TOP", 0, -21},							-- Talking Head
 	-- ActionBar positions
-	["bottom_bars"] = {"BOTTOM", UIParent, "BOTTOM", 0, 8},							-- Bottom bars
+	["bottom_bars"] = {"BOTTOM", UIParent, "BOTTOM", 0, 30},						-- Bottom bars
 	["right_bars"] = {"BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -21, 330},			-- Right bars
 	["pet_horizontal"] = {"BOTTOMRIGHT", UIParent, "BOTTOM", -175, 167},			-- Horizontal pet bar
 	["stance_bar"] = {"BOTTOMRIGHT", UIParent, "BOTTOM", -202, 167},				-- Stance bar
