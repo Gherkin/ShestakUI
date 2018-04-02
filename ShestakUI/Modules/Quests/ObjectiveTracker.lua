@@ -26,7 +26,14 @@ BONUS_OBJECTIVE_TRACKER_MODULE.Header.Background:Hide()
 WORLD_QUEST_TRACKER_MODULE.Header.Background:Hide()
 
 ObjectiveTrackerFrame.HeaderMenu.Title:SetAlpha(0)
-OBJECTIVE_TRACKER_DOUBLE_LINE_HEIGHT = 30
+
+hooksecurefunc(DEFAULT_OBJECTIVE_TRACKER_MODULE, "SetStringText", function(_, fontString, _, useFullHeight)
+	local _, fontHeight = SystemFont_Shadow_Med1:GetFont()
+	local stringHeight = fontString:GetHeight()
+	if stringHeight > OBJECTIVE_TRACKER_DOUBLE_LINE_HEIGHT * 2 - (fontHeight * 2) and not useFullHeight then
+		fontString:SetHeight(fontHeight * 2)
+	end
+end)
 
 ----------------------------------------------------------------------------------------
 --	Skin ObjectiveTrackerFrame item buttons
@@ -139,10 +146,20 @@ if C.skins.blizzard_frames == true then
 	button.plus:Hide()
 	hooksecurefunc("ObjectiveTracker_Collapse", function()
 		button.plus:Show()
+		if C.misc.minimize_mouseover then
+			button:SetAlpha(0)
+			button:HookScript("OnEnter", function() button:SetAlpha(1) end)
+			button:HookScript("OnLeave", function() button:SetAlpha(0) end)
+		end
 	end)
 
 	hooksecurefunc("ObjectiveTracker_Expand", function()
 		button.plus:Hide()
+		if C.misc.minimize_mouseover then
+			button:SetAlpha(1)
+			button:HookScript("OnEnter", function() button:SetAlpha(1) end)
+			button:HookScript("OnLeave", function() button:SetAlpha(1) end)
+		end
 	end)
 end
 
@@ -155,16 +172,6 @@ if C.automation.auto_collapse_reload then
 	collapse:SetScript("OnEvent", function(self, event)
 		ObjectiveTracker_Collapse()
 	end)
-end
-
-----------------------------------------------------------------------------------------
---	Mouseover for ObjectiveTrackerFrame.HeaderMenu.MinimizeButton
-----------------------------------------------------------------------------------------
-if C.misc.minimize_mouseover then
-	local MinimizeButton = ObjectiveTrackerFrame.HeaderMenu.MinimizeButton
-	MinimizeButton:SetAlpha(0)
-	MinimizeButton:HookScript("OnEnter", function() MinimizeButton:SetAlpha(1) end)
-	MinimizeButton:HookScript("OnLeave", function() MinimizeButton:SetAlpha(0) end)
 end
 
 ----------------------------------------------------------------------------------------

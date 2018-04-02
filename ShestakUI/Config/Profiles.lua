@@ -98,7 +98,6 @@ if T.name == "Oz" and T.realm == "Pozzo dell'Eternità" then
 	C["tooltip"].average_lvl = true
 	C["tooltip"].raid_icon = true
 	C["tooltip"].who_targetting = true
-	C["tooltip"].item_transmogrify = true
 	C["chat"].background = true
 	C["chat"].filter = false
 	C["chat"].chat_bar = true
@@ -256,10 +255,4 @@ if IsWetxius then
 		C["combattext"].heal_treshold = 1000
 		C["stats"].experience = false
 	end
-
-	local frame = CreateFrame("Frame")
-	frame:RegisterEvent("PLAYER_LOGIN")
-	frame:SetScript("OnEvent", function()
-		SetCVar("lootUnderMouse", 1)
-	end)
 end

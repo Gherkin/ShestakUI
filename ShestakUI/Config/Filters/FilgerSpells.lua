@@ -653,8 +653,8 @@ C["filger_spells"] = {
 			{spellID = 213680, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Item Sets
-			-- Natural Defenses (T19)
-			{spellID = 211160, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Apex Predator (T21)
+			{spellID = 252752, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
@@ -808,6 +808,8 @@ C["filger_spells"] = {
 			{spellID = 33763, unitID = "target", caster = "player", filter = "BUFF"},
 			-- Rejuvenation
 			{spellID = 774, unitID = "target", caster = "player", filter = "BUFF"},
+			-- Rejuvenation (Germination)
+			{spellID = 155777, unitID = "target", caster = "player", filter = "BUFF"},
 			-- Regrowth
 			{spellID = 8936, unitID = "target", caster = "player", filter = "BUFF"},
 			-- Wild Growth
@@ -3543,12 +3545,6 @@ C["filger_spells"] = {
 			{spellID = 236380, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Zann'esu Journey [Waist]
 			{spellID = 226852, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Belo'vir's Final Stand [Chest]
-			{spellID = 207283, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Magtheridon's Banished Bracers [Wrists]
-			{spellID = 214404, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Shattered Fragments of Sindragosa [Head]
-			{spellID = 248176, unitID = "player", caster = "all", filter = "BUFF"},
 
 			-- Professions
 			-- Goblin Glider [Goblin Glider Kit]

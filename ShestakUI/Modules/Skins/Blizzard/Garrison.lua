@@ -97,6 +97,9 @@ local function LoadSkin()
 	GarrisonMissionFrameTab1:SetPoint("BOTTOMLEFT", GarrisonMissionFrame, "BOTTOMLEFT", 11, -40)
 	T.SkinTab(GarrisonMissionFrameTab1)
 	T.SkinTab(GarrisonMissionFrameTab2)
+	
+	GarrisonMissionFrameHelpBox:StripTextures()
+	GarrisonMissionFrameHelpBox:CreateBackdrop("Transparent")
 
 	-- Mission list
 	local MissionTab = GarrisonMissionFrame.MissionTab
@@ -190,7 +193,7 @@ local function LoadSkin()
 				local r, g, b = unpack(C.media.border_color)
 				if reward.IconBorder:IsShown() then
 					local _, _, itemRarity = GetItemInfo(reward.itemID)
-					if itemRarity > 1 then
+					if itemRarity and itemRarity > 1 then
 						r, g, b = reward.IconBorder:GetVertexColor()
 					end
 				end

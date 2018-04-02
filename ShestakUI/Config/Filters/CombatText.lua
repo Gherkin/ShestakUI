@@ -36,9 +36,12 @@ if C.combattext.merge_aoe_spam then
 	T.aoespam[246442] = 4			-- Spectral Blast (Tarnished Sentinel Medallion Trinket)
 	T.aoespam[188091] = 4			-- Deadly Grace (Potion of Deadly Grace)
 	T.aoespam[235999] = 1			-- Kil'jaeden's Burning Wish (Trinket)
+	T.aoespam[257244] = 4			-- Worldforger's Flame (Khaz'goroth's Courage Trinket)
 	T.aoespam[207694] = 3			-- Symbiote Strike
 	T.aoespam[210380] = 4			-- Aura of Sacrifice
 	T.aoespam[252907] = 5			-- Torment the Weak
+	T.aoespam[252896] = 0.5			-- Chaotic Darkness
+	T.aoespam[253022] = 0.5			-- Sorrow
 end
 
 -- Class config
@@ -211,7 +214,8 @@ elseif T.class == "HUNTER" then
 elseif T.class == "MAGE" then
 	if C.combattext.merge_aoe_spam then
 		T.aoespam[217694] = 3.5		-- Living Bomb
-		T.aoespam[44461] = 3		-- Living Bomb (AoE)
+		T.aoespam[244813] = 3.5		-- Living Bomb
+		T.aoespam[44461] = 3.5		-- Living Bomb (AoE)
 		T.aoespam[2120] = 0			-- Flamestrike
 		T.aoespam[194432] = 0		-- Aftershocks
 		T.aoespam[12654] = 3		-- Ignite
@@ -532,6 +536,10 @@ elseif T.class == "WARRIOR" then
 		T.aoespam[5308] = 0			-- Execute
 		T.aoespam[772] = 3			-- Rend
 		T.aoespam[156287] = 3		-- Ravager
+		T.aoespam[23881] = 0		-- Bloodthirst
+		T.aoespam[205546] = 2		-- Odyn's Fury
+		T.aoespam[243228] = 2		-- Odyn's Fury
+		T.merge[205547] = 205546	-- Odyn's Fury
 		T.merge[85384] = 96103		-- Raging Blow Off-Hand
 		T.merge[95738] = 50622		-- Bladestorm Off-Hand
 		T.merge[163558] = 5308		-- Execute Off-Hand
